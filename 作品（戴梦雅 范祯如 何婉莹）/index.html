@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>电影数据</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+    <!-- font -->
+    <link href="css/font.css" rel="stylesheet">
+
+    <!-- ico -->
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<script src="js/echarts.min.js"></script>
+<script src="js/china.js"></script>
+
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="text-dark-50 navbar-brand js-scroll-trigger" href="#page-top">首页</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                菜单
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class=" collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="text-dark-50 nav-link js-scroll-trigger" data-toggle="tooltip" data-placement="right" title="“百亿票房”指所选取电影总票房之和" href="#partOne">百亿票房</a>
+                    </li>
+                    <br>
+                    <li class="nav-item">
+                        <a class="text-dark-50 nav-link js-scroll-trigger" data-toggle="tooltip" data-placement="right" title="*“3+1”指3种线上播放端及1种线下影院观影方式" href="#partTwo">观影“3+1”</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-dark-50 nav-link js-scroll-trigger" href="#partThree">想看画像</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">爆款主旋律</h1>
+                <br>
+                <h1 class="mx-auto my-0 text-uppercase">中国电影的新黑马</h1>
+                <br>
+                <h2 class="mx-auto mt-2 mb-5 text-justify" style="color: #d0d0d0;">
+                    <span style="font-size:22px"><i>50.49亿元</i></span>，主旋律影片集中亮相，创造了国庆档新纪录。今年国庆档主旋律电影大放异彩，引爆观影热潮，票房超过2008年全国院线全年总和。我国主旋律电影进入新的发展阶段，口碑票房双丰收。
+                </h2>
+            </div>
+        </div>
+    </header>
+
+    <!--第一部分-->
+    <!-- About Section -->
+    <section class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <br />
+                    <br />
+                    <p class="text-justify" style="text-indent:2.3em;">
+                        今年“国庆档”的三部主旋律国产影片备受瞩目，高质量、黄金周、七十周年等因素汇聚在一起共同促成了这一繁荣景象。对比近年较为知名的主旋律电影，《我和我的祖国》、《中国机长》、《攀登者》这三部影片首映票房遥遥领先。</p>
+                </div>
+            </div>
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-md-6">
+                    <br>
+                    <div class="img card">
+                        <img src="./img/piechart_wordcloud.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="width: 100%;">
+        <br />
+        <p style="margin-left: 33%;color: gray;font-size: smaller">
+            图1 2019.10.1在映影片（文字越大票房越高）<br /> 数据来源：猫眼电影专业版
+        </p>
+    </div>
+
+    <!--第二部分-->
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+        <div class="container">
+
+            <!-- 红海行动-->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="">
+                    <div>
+                        <p style="text-indent:2em;">近年热度相对较高的电影在首映日票房排名中几乎都占据前列，甚至高居榜首，我国主旋律影片发展态势良好。</p>
+                        <p style="text-indent:2em;"> 《我和我的祖国》、《中国机长》、《攀登者》首映日票房总计6.57亿。</p>
+                    </div>
+                    <br />
+                    <!--<div style="text-align: right;">
+                    	<p style="color: gray;font-size: 12px;">*选择折线图数据可查看对应扇形图数据</p>
+                    </div>-->
+                </div>
+
+                <!--
+                	作者：offline
+                	时间：2019-12-08
+                	描述：对应js文件 js/AreaSea.js
+                -->
+                <div id="main" style="width: 100%;height:400px;"></div>
+                <br>
+                <div style="width: 100%;">
+                    <p style="margin-left: 5%;color: gray;font-size: smaller">
+                        图2 近十年部分主旋律首映日票房统计（单位：万元）<br /> 数据来源：猫眼电影专业版
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7">
+                    <!-- <div id="mainBO" style="width: 140%;height: 700px;"></div> -->
+                </div>
+
+                <div class="" style="margin-top:0px;">
+                    <div>
+                        <p style="text-indent:2.3em;">通过下表不难看出票房排名前十的城市都是一二线城市，这些地方经济发展水平较高，收入水平较高，对于电影的需求也相应更大。值得一提的是，上表所示的十个城市除西安、南京外，均为中国百强城市前十名和中国城市GDP前十名，其中南京位列第11位，相差不大。而在此次国庆档城市票房排名中，GDP排名相对较后的西安脱颖而出，挤进前十。
+                        </p>
+
+                        <br />
+                    </div>
+                </div>
+
+                <!-- 城市票房排名地图 -->
+                <!--
+                	作者：offline
+                	时间：2019-12-08
+                	描述：对应js文件 js/AMap.js
+                -->
+                <div id="mainMap" style="width: 90%;height:600px;margin:auto;"></div>
+
+
+                <div style="width: 100%;">
+                    <br />
+                    <p style="margin-left: 5%;color: gray;font-size: smaller">
+                        图3 2019.10.1三部主旋律影片城市票房排名<br /> 数据来源：猫眼电影专业版
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <br />
+    <div style="text-align: center;">
+        <p style="text-indent:2em;"><i>除了上述三部影片，今年来又出现了许多优秀的主旋律影片，我们选择了部分知名度较高的加以分析。</i></p>
+    </div>
+    <br />
+
+
+    <section id="partOne" class="">
+
+        <div class="container ">
+            <h3 class="text-center" data-toggle="tooltip" data-placement="right" title="“百亿票房”指所选取电影总票房之和" style="color: #B22222;font-family: cus;">百亿票房，你贡献了多少？
+            </h3>
+            <br />
+            <div style="text-align: right;">
+                <p style="color: gray;font-size: 12px;">*百亿票房指所选取电影总票房之和</p>
+            </div>
+            <br />
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7">
+                    <!--
+                    	作者：offline
+                    	时间：2019-12-08
+                    	描述：对应js文件 js/sum.js
+                    -->
+                    <div id="sum" style="height: 600px;margin:0;"></div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <p class="mb-0" style="text-indent:2.2em;">
+                            截止2019年11月25日，《战狼2》位居中国电影票房总榜第一，然而其首映日票房相较其他影片差距甚远。虽有第一部的好口碑加持，但也难逃工作日的影响，相比在节假日前一天首映的《我和我的祖国》等，其首映票房逊色了许多。
+                        </p>
+                    </div>
+                </div>
+                <div style="width: 100%;">
+                    <p style="margin-left: 1%;color: gray;font-size: smaller">
+                        图4 部分主旋律电影总票房(单位：亿元）/截止至2019年11月24日<br /> 数据来源：猫眼电影专业版
+                    </p>
+                </div>
+                <br>
+                <div style="align-content: center;">
+                    <br />
+                    <p style="text-indent:2em;">但《战狼2》票房后来居上，直至顶峰，主要还是得益于影片的高质量积累出的好口碑。和同日上映的《建军大业》相比，《战狼2》的百度搜索指数一路攀升，并出现多个峰值，可见其后期发力十足。</p>
+                    <br>
+                    <!-- <img class="img card" style="width: 85%;margin: 0 auto;" src="img/baiduIndex.gif" alt="百度搜索指数"> -->
+                    <div id="Gif" style="height:350px;margin:auto;"></div>
+                </div>
+
+                <div style="width: 100%;">
+                    <p style="margin-left: 4%;color: gray;font-size: smaller">
+                        <br>图5 《战狼2》与《建军大业》上映一月内的百度搜索指数<br /> 数据来源：百度指数
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partTwo" class="">
+        <div class="container">
+            <h3 class="text-center" data-toggle="tooltip" data-placement="right" title="*“3+1”指3种线上播放端及1种线下影院观影方式" style="color: #B22222;font-family: cus;">
+                观影“3+1”，看看你是几？</h3>
+            <br>
+            <div style="text-align: right;">
+                <p style="color: gray;font-size: 12px;">
+                    *“3+1”指3种线上播放端及1种线下影院观影方式
+                </p>
+            </div>
+            <div style="margin-top:20px;">
+                <br />
+                <div>
+                    <p style="margin-top:20px;text-indent:2em;">《战狼2》与《建军大业》于同日上映，起初前者并不被看好，首日排片占比远不及后者，但在次日就反超了《建军大业》，排片占比高达41.9%。</p>
+                </div>
+                <div>
+                    <!--
+                    	作者：offline
+                    	时间：2019-12-08
+                    	描述：对应js文件 js/firstDay.js
+                    -->
+                    <div id="mainOccupy" style="width: 100%;height: 700px;"></div>
+                </div>
+                <div style="width: 100%;">
+                    <p style="margin-left: 7%;color: gray;font-size: smaller">
+                        图6 首日排片占比<br /> 数据来源：猫眼专业版
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-justify">
+                        <p class="mb-0" style="text-indent:2.3em;">
+                            对于线上，以《建军大业》《战狼》《战狼2》《红海行动》《湄公河行动》为例，《红海行动》和《战狼2》的播放量远高于另外二者。此外，在这4部电影中， 基本上都呈现出移动端多于OTT端，OTT端又多于PC端的规律。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-7">
+                    <!--
+                    	作者：offline
+                    	时间：2019-12-08
+                    	描述：对应js文件 js/Equip.js
+                    -->
+                    <div id="mainEquip" style="width: 100%;height:600px;margin-left: 2%;margin-bottom: -150px;"></div>
+
+                    <div>
+                        <p style="margin-left: 13.5%;color: gray;font-size: smaller" ;>
+                            图7 观影设备使用情况(单位：万台）/2018年8月<br /> 数据来源：艾瑞影视指数-艾瑞数据
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <p style="margin-top:0px;  text-indent:2.2em;" class="text-justify;">
+                    《战狼》在2017年8月，在各类播放端的观影量达到峰值。而《战狼》的早在2015年便已经上映，而2017年8月的峰值，应当与《战狼2》在2017年7月底上映有着直接的关系。《战狼2》的观影量相对正常，可以看出上映之后的几个月逐渐由峰值下滑。
+                </p>
+
+                <div class="col-md-6">
+                    <br><br />
+                    <div class="img card">
+                        <!--
+                        	作者：offline
+                        	时间：2019-12-08
+                        	描述：对应js的文件 js/Wolf.js
+                        -->
+                        <div id="mainWolf1" style="width: 100%;height:400px; margin:auto;"></div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6"><br><br />
+                    <div class="img card">
+                        <!--
+                        	作者：offline
+                        	时间：2019-12-08
+                        	描述：对应的js的文件 js/Wolf2.js
+                        -->
+                        <div id="mainWolf2" style="width: 100%;height:400px;margin:auto;"></div>
+
+                    </div>
+                </div>
+                <br />
+                <div class="col-md-6">
+                    <br />
+
+                    <p style=" margin-left: 4%;color: gray;font-size: smaller">
+                        图8 《战狼》观影设备使用情况(单位：万台）/截止至2018年8月<br /> 数据来源：艾瑞影视指数-艾瑞数据
+                    </p>
+                </div>
+                <div class="col-md-6" style="margin: auto;">
+                    <br />
+                    <p style="margin-left: 4%;color: gray;font-size: smaller">
+                        图9 《战狼2》观影设备使用情况(单位：万台）/截止至2018年8月<br /> 数据来源：艾瑞影视指数-艾瑞数据
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            <!--P12-->
+            <div class="text-justify">
+                <br />
+                <p style="margin-top:20px; text-indent:2.2em;">
+                    从网络视频平台的播放量（以腾讯视频为例）来看，除三部未上架的影片之外，影片的播放量呈现两极分化的趋势。军事题材的主旋律电影更受大众的欢迎，相反更偏向于历史题材的主旋律电影更少人问津。而且播放量高的的电影，在票房上也不弱，《战狼2》是国产电影史上票房第一，《红海行动》排名第二，可见大众对这几部主旋律电影的喜爱以及认可。
+                </p>
+            </div>
+            <div>
+                <!--
+                	作者：offline
+                	时间：2019-12-08
+                	描述：对应的js文件 js/Tencent.js
+                -->
+                <div id="mainTencent" style="width: 80%;height:600px;margin: auto;"></div>
+            </div>
+            <div style="100%">
+                <p style="margin-left: 15%;color: gray;font-size: smaller">
+                    图10 部分主旋律影片腾讯视频播放量(单位：亿）/截止至11月25日0时<br /> 数据来源：腾讯视频
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        红海行动
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                        	作者：offline
+                        	时间：2019-12-09
+                        	描述：对应js js/redSea.js
+                        -->
+
+                    <div id="containerOne" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        建党伟业
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                        	作者：offline
+                        	时间：2019-12-09
+                        	描述：对应js js/buildParty.js
+                        -->
+                    <div id="containerTwo" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        建军伟业
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                        	作者：offline
+                        	时间：2019-12-09
+                        	描述：对应js js/buildArmy.js
+                        -->
+                    <div id="containerThree" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!--这个地方要改的变量名有上面的myModal那个id，一共十五个的话，就是ctrl+C然后ctrl+V，十五次，变量名就😊-->
+    <!--写了三个就对应前三张图片，海报尽量找一样大小的，会整齐点😊-->
+
+    <!--😴-->
+
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        厉害了我的国
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                    	作者：offline
+                    	时间：2019-12-09
+                    	描述：对应js js/mycountry.js
+                    -->
+                    <div id="containerFour" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        烈火英雄
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/Hero.js
+                -->
+                    <div id="containerFive" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        流浪地球
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/earth.js
+                -->
+                    <div id="containerSix" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        湄公河行动
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/meiRiver.js
+                -->
+                    <div id="containerSeven" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        攀登者
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/Climber.js
+                -->
+                    <div id="containerEight" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        我和我的祖国
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/meAndMyCountry.js
+                -->
+                    <div id="containerNine" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        战狼2
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/WolfTwo.js
+                -->
+                    <div id="containerTen" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        中国机长
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/chinacaptain.js
+                -->
+                    <div id="container11" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">
+                        中国蓝盔
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                </div>
+                <div class="modal-body">
+                    <!--
+                	作者：offline
+                	时间：2019-12-09
+                	描述：对应js js/BlueCap.js
+                -->
+                    <div id="container12" style="width: 450px; height:400px"></div>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+
+    <section id="partThree">
+        <div class="container"><br>
+            <h3 style="margin-top:40px;color: #B22222;font-family: cus;" class="text-center">高分主旋律，你为哪部打了call？</h3>
+            <br />
+            <br>
+            <!--P13-->
+            <div class="text-justify">
+                <p style="text-indent:2.3em;">从六部电影的热度指数、媒体曝光度、粉丝活跃度走势图看，三个指数存在着明显的正相关关系，媒体曝光度与粉丝活跃度越高，热度指数越高。另外《红海行动》的票房虽然不如《流浪地球》，但是在网络上的受关注度却比《流浪地球》高上不少，这可能也与两部影片本身内容有关，《红海行动》是军事题材，以“蛟龙突击队”的撤侨任务为原型进行改编，《流浪地球》却是科幻小说改编，受众不同导致关注度也会有所不同。
+                </p>
+                <br>
+            </div>
+            <div style="margin-top:20px;">
+                <!--热度总榜-->
+                <!--
+                	作者：offline
+                	时间：2019-12-08
+                	描述：对应js文件 js/Hot.js
+                -->
+                <div id="mainHot" style="width: 80%;height:600px;margin: auto;"></div>
+                <div>
+                    <p style="margin-left: 15%;color: gray;font-size: smaller">图11 电影热度榜<br /> 数据来源：电影数据排行榜-中国电影数据网
+                    </p>
+                </div>
+            </div>
+            <div>
+                <br>
+                <p style="color: gray; text-align: center;">点击下方电影名称可查看用户想看画像</p>
+                <br>
+            </div>
+            <!--多图的地方，加在哪里来着-->
+            <!--多图的模块，下面这个div就是-->
+            <div class="justify-content-center" style="margin-bottom: 20px;">
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" style="text-align: center;">
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">红海行动</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal2">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">建党伟业</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal3">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">建军伟业</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" style="text-align: center;">
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal4">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">厉害了我的国</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-toggle="modal" data-target="#myModal5">
+                        <div class="card">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">烈火英雄</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal6">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">流浪地球</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" style="text-align: center;">
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal7">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">湄公河行动</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal8">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">攀登者</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal9">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">我和我的祖国</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" style="text-align: center;">
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal10">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">战狼2</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal11">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">中国机长</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" data-toggle="modal" data-target="#myModal12">
+                            <h4><a href="#mainHot" style="color: #DC143C;font-size: 18px;">中国蓝盔</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p style="margin-left: 0%;color: gray;font-size: smaller">
+                    图12 部分主旋律电影用户想看画像<br /> 数据来源：猫眼电影专业版
+                </p>
+            </div>
+
+            <!--P14-->
+            <div style="margin-top:20px;margin-bottom: -20px;">
+                <!--豆瓣-->
+                <div id="mainDou" style="height: 450px;width:90%;margin:auto;margin-bottom: -20px;"></div>
+                <div>
+                    <p style="margin-left: 6%;margin-bottom: 50px;color: gray;font-size: smaller">
+                        图13 部分主旋律电影豆瓣评分<br /> 数据来源：豆瓣
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="text-justify">
+                <p style="text-indent:2em;">
+                    在豆瓣评分上排名最高的《红海行动》并不是票房最高的电影，并列第二的《湄公河行动》、《我和我的祖国》也并非是票房排名前三的电影，可见票房高不一定评分高。而除了《中国蓝盔》外，其余电影均高于6分，可见主旋律电影的评价较为不错，观众对此类主旋律电影的认可度较高。
+                </p>
+                <br>
+                <p style="text-indent:2.7em;">
+                    <i>主旋律的成功不是一蹴而就，相较早期讴歌革命先烈丰功伟绩的主旋律影片，近年来主旋律影片更多取材于生活中的“英雄们”，更具平民化，更有亲近感，也更符合大众审美趣味。</i>
+                </p>
+            </div>
+
+            <div class="text-justify">
+
+            </div>
+    </section>
+
+    <br />
+    <!-- Footer -->
+
+    <footer>
+        <div class="container" style="text-align: center;">
+            Copyright &copy; Film Data 2019
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
+
+<!--首日排片占比-->
+<script type="text/javascript" src="js/firstDay.js"></script>
+
+<!--战狼2-->
+<script type="text/javascript" src="js/Wolf2.js"></script>
+
+<!--战狼-->
+<script type="text/javascript" src="js/Wolf.js"></script>
+
+<!--电影设备使用量情况-->
+<script type="text/javascript" src="js/Equip.js"></script>
+
+<!--电影票房榜-->
+
+<!--地图 各地电影排名-->
+<script type="text/javascript" src="js/AMap.js"></script>
+
+<!--票价变化 main1-->
+
+<!--红海行动-->
+<script type="text/javascript" src="js/AredSea.js"></script>
+
+<!--腾讯视频-->
+<script type="text/javascript" src="js/Tencent.js"></script>
+
+<!--热度总榜-->
+<script type="text/javascript" src="js/Hot.js"></script>
+
+<!--总票-->
+<!--删了一点script-->
+<script type="text/javascript" src="js/sum.js"></script>
+<!--豆瓣-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=7uevuBcdVGuMIeKLtbnYKXaq9Az6HqrZ"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+
+<script type="text/javascript" src="js/Dou.js"></script>
+
+<script type="text/javascript" src="js/layui.all.js"></script>
+<!--1-->
+<script type="text/javascript" src="js/redSea.js"></script>
+<script type="text/javascript" src="js/buildParty.js"></script>
+<script type="text/javascript" src="js/buildArmy.js"></script>
+<script type="text/javascript" src="js/myCountry.js"></script>
+<script type="text/javascript" src="js/MeAndMyCountry.js"></script>
+<script type="text/javascript" src="js/MeiRiver.js"></script>
+<script type="text/javascript" src="js/WolfTwo.js"></script>
+<script type="text/javascript" src="js/BlueCap.js"></script>
+<script type="text/javascript" src="js/Climber.js"></script>
+<script type="text/javascript" src="js/Chinacaptain.js"></script>
+
+<script type="text/javascript" src="js/Hero.js"></script>
+<script type="text/javascript" src="js/earth.js"></script>
+<script type="text/javascript" src="js/gif.js"></script>
